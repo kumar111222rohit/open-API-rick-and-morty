@@ -1,7 +1,7 @@
 import React from 'react';
-import { useTranslation } from '../../i18n';
+import { useTranslation } from 'react-i18next';
 import useStore from '../../hooks/useStore';
-import styles from './Character.module.scss'; // Correctly import as a module
+import styles from './Character.module.scss'; 
 import Footer from '../Footer/Footer';
 import { CharacterProps } from '../../types/characterData';
 
@@ -10,7 +10,8 @@ const Character: React.FC<CharacterProps> = ({
   handlePagination,
   episodesData = [],
 }) => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
+
   const { setLoaderState } = useStore();
 
   // Get the episodes in which the character was seen for the first time

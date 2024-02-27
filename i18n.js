@@ -1,9 +1,21 @@
-const NextI18Next = require('next-i18next').default;
-const { localeSubpaths } = require('next/config').default().publicRuntimeConfig;
-const path = require('path');
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-module.exports = new NextI18Next({
-  defaultNS: 'common',
-  localePath: path.resolve('./public/static/locales/'),
+import translationEN from './public/static/locales/en/en.json';
+
+const resources = {
+  en: {
+    translation: translationEN,
+  },
+};
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'en',
   keySeparator: false,
+  interpolation: {
+    escapeValue: false,
+  },
 });
+
+export default i18n;

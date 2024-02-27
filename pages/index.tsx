@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-import { useTranslation } from '../i18n';
+import { useTranslation } from 'react-i18next';
 import {
   processCharacterData,
   processEpisodesData,
@@ -18,7 +18,7 @@ function Home({
   data: any;
   episodesData: any;
 }) {
-  const [t] = useTranslation();
+  const {t} = useTranslation();
   return (
     <>
       <Head>
