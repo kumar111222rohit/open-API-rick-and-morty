@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 
-```Node version v18.17.0 ```
+`Node version v18.17.0 `
 
 ### Installations
 
@@ -33,7 +33,7 @@ For Dev mode:
 `yarn dev`
 or `npm run dev`
 
-### Technical  features
+### Technical features
 
 This application has been built keeping in mind production quality standards which can be categorised as:
 
@@ -51,7 +51,7 @@ This application has been built keeping in mind production quality standards whi
 12. State management using React Context
 13. use of hooks
 14. API integration
-15. Generuic ```makeAPICall``` service
+15. Generuic `makeAPICall` service
 16. Styling using SCSS
 17. Code modularization
 18. Design patterns

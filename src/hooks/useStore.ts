@@ -1,5 +1,5 @@
-import React from 'react';
-import AppContext from '../services/appContext';
+import React from "react";
+import AppContext from "../services/appContext";
 
 const useStore = () => {
   const data: any = React.useContext(AppContext);

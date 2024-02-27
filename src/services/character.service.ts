@@ -13,7 +13,7 @@ export default class Character {
       const data = await response.json();
       return data;
     } catch (e) {
-      //e
+      //error
       throw e;
     }
   }
