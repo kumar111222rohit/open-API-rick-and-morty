@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import AppContext from '../../services/appContext';
 import CharacterService from '../../services/character.service';
 
-const AppContainer: React.FC<{ characterData: any; episodesData: any }> = ({
+const AppContainer: React.FC<{ characterData: any; episodesData: any; children: ReactNode }> = ({
   children,
   characterData,
   episodesData,

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import useStore from '../../hooks/useStore';
-import styles from './Character.module.scss'; 
+import { useTranslation } from "react-i18next";
+import styles from './Character.module.scss';
 import Footer from '../Footer/Footer';
 import { CharacterProps } from '../../types/characterData';
+import useStore from '../../hooks/useStore';
 
 const Character: React.FC<CharacterProps> = ({
   characterData,
@@ -19,7 +19,7 @@ const Character: React.FC<CharacterProps> = ({
     const splitArr = episodeURL.split('/');
     const eid = parseInt(splitArr[splitArr.length - 1]);
     const firstEP = episodesData.find((e: any) => e.id === eid);
-    return firstEP ? firstEP.name : 'Unknown'; // Ensure you handle possible undefined return
+    return firstEP ? firstEP.name : 'Unknown';
   };
 
   React.useEffect(() => {
@@ -46,9 +46,8 @@ const Character: React.FC<CharacterProps> = ({
                 </a>
                 <span className={styles.status}>
                   <span
-                    className={`${styles.icon} ${
-                      item.status === 'Dead' ? styles.iconDead : styles.iconAlive
-                    }`}
+                    className={`${styles.icon} ${item.status === 'Dead' ? styles.iconDead : styles.iconAlive
+                      }`}
                   ></span>
                   {item.status} - {item.species}
                 </span>
