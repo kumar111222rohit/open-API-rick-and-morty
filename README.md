@@ -1,4 +1,10 @@
-## Getting Started
+## Getting Started with open-API-rick-and-morty
+
+## Pre-requisites
+
+```Node version v18.17.0 ```
+
+### Installations
 
 First, run the install scripts
 
