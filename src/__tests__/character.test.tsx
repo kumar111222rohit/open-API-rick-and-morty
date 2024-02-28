@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 // Mock useTranslation
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({
-    t: (key: string) => key, // Mock implementation returning the key
+    t: (key: string) => key,
   }),
 }));
 
@@ -15,7 +15,6 @@ jest.mock('../hooks/useStore', () => () => ({
   setLoaderState: jest.fn(),
 }));
 
-// Example test data
 const mockCharacterData: any = {
   results: [
     {
@@ -47,7 +46,6 @@ const mockEpisodesData: any = [
   },
 ];
 
-// Mock handlePagination function
 const mockHandlePagination = jest.fn();
 
 describe('Character', () => {

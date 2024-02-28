@@ -3,9 +3,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    // Mock CSS Modules
     '\\.module\\.scss$': 'identity-obj-proxy',
-    // Mock other static assets if needed
     '\\.(css|less)$': 'identity-obj-proxy',
   },
   transform: {

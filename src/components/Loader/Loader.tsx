@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Loader.module.scss'; // Import as a module
+import styles from './Loader.module.scss';
 import useStore from '../../hooks/useStore';
 
 const Loader: React.FC = () => {
