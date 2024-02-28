@@ -1,62 +1,134 @@
-## Getting Started with open-API-rick-and-morty
 
-## Pre-requisites
+# open-API-rick-and-morty
 
-`Node version v18.17.0 `
+This Next.js application leverages Rick and Morty's open API to fetch and display character and episode details. It prioritizes production quality by incorporating various features. The page is rendered with first API call on the server and the subsequest calls are made from client when next/prev is clicked.
 
-### Installations
 
-First, run the install scripts
+## Authors
 
-`yarn install or npm  install`
+- [Rohit kumar](https://github.com/kumar111222rohit)
 
-once the installation is done
 
-For production build
+## Demo
 
-`yarn build`
+The project is live here:
 
-or
+https://open-api-rick-and-morty.vercel.app/
 
-`npm run build`
 
-start the app
+## Environment Settings
 
-`yarn start`
+To run this project, node version required
+` v18.17.0`
 
-or
 
-` npm run start`
 
-For Dev mode:
+##  Local Installation
 
-`yarn dev`
-or `npm run dev`
+Clone the project
 
-### Technical features
+```bash
+  git clone  https://github.com/kumar111222rohit/open-API-rick-and-morty.git
+```
 
-This application has been built keeping in mind production quality standards which can be categorised as:
+Go to the project directory
 
-1. Responsive
-2. WCAG support
-3. Typed with typescript
-4. React
-5. Component reusability
-6. Localization
-7. Server side and client side rendering
-8. First render on Server side
-9. Unit testing
-10. Code splitting
-11. Linted and prettified
-12. State management using React Context
-13. use of hooks
-14. API integration
-15. Generuic `makeAPICall` service
-16. Styling using SCSS
-17. Code modularization
-18. Design patterns
-19. Error handling
+```bash
+  cd open-API-rick-and-morty
+```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
+```bash
+  npm install
+```
+
+Build the app
+
+```bash
+  npm run build
+```
+
+Start the app
+
+```bash
+  npm run start
+```
+
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+
+## Features
+
+- Built on Next.js
+- Responsive for mobile and desktop
+- Accessibility: Built with WCAG support for inclusive user experience.
+
+- Type Safety: Ensured by TypeScript for enhanced code maintainability.
+
+- React Framework: Utilizes React for efficient component-based development.
+
+- Reusable Components: Promotes modularity and code reusability.
+- Localization Ready: Supports potential internationalization efforts.
+- Server-Side Rendering (SSR): Improves initial page load performance.
+- Client-Side Rendering (CSR): Enables dynamic updates and interactivity.
+- Code Splitting: Optimizes bundle size and loading time.
+- Linting and Prettier: Enforces consistent code style and formatting.
+- React Context: Provides centralized state management for shared data.
+- Functional Components and Hooks: Leverages modern React features for component composition.
+- API Integration: Seamlessly fetches data from the Rick and Morty API.
+- Generic makeAPICall Service: Simplifies API interactions.
+- SCSS Styling: Employs SCSS for maintainable and scalable styling.
+- Code Modularization: Organizes code into logical modules for better readability.
+- Error Handling: Implements robust error handling mechanisms.
+- Unit test for components and APIs
+
+
+
+## API Reference
+
+#### Get character
+
+```http
+  GET /api/character
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `id` | `string` | **Optional**. Gives character data for an id |
+| `page` | `string` | **Optional**. Gives character data from a page |
+
+#### Get episode
+
+```http
+  GET /api/episode/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#### Get all locations of a character 
+
+
+```http
+  GET /api/location/
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of character to fetch all location |
+
+
+
+
+## 🚀 About Me
+Learning, Unlearning and Re-learning everyday.
+
