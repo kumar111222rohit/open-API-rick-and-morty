@@ -1,9 +1,9 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
-import styles from "./Character.module.scss";
-import Footer from "../Footer/Footer";
-import { CharacterProps } from "../../types/characterData";
-import useStore from "../../hooks/useStore";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import styles from './Character.module.scss';
+import Footer from '../Footer/Footer';
+import { CharacterProps } from '../../types/characterData';
+import useStore from '../../hooks/useStore';
 
 const Character: React.FC<CharacterProps> = ({
   characterData,
@@ -16,10 +16,10 @@ const Character: React.FC<CharacterProps> = ({
 
   // Get the episodes in which the character was seen for the first time
   const getFirstSeenEpisodeName = (episodeURL: string) => {
-    const splitArr = episodeURL.split("/");
+    const splitArr = episodeURL.split('/');
     const eid = parseInt(splitArr[splitArr.length - 1]);
     const firstEP = episodesData.find((e: any) => e.id === eid);
-    return firstEP ? firstEP.name : "Unknown";
+    return firstEP ? firstEP.name : 'Unknown';
   };
 
   React.useEffect(() => {
@@ -29,7 +29,7 @@ const Character: React.FC<CharacterProps> = ({
   return (
     <>
       <section className={styles.showcaseWrapper}>
-        {characterData.results.map((item) => (
+        {characterData.results.map(item => (
           <article className={styles.characterCard} key={item.id}>
             <div className={styles.imageWrapper}>
               <img className={styles.image} src={item.image} alt="character" />
@@ -47,7 +47,7 @@ const Character: React.FC<CharacterProps> = ({
                 <span className={styles.status}>
                   <span
                     className={`${styles.icon} ${
-                      item.status === "Dead"
+                      item.status === 'Dead'
                         ? styles.iconDead
                         : styles.iconAlive
                     }`}
@@ -56,7 +56,7 @@ const Character: React.FC<CharacterProps> = ({
                 </span>
               </div>
               <div className={styles.section}>
-                <span className={styles.textGray}>{t("last_location")}</span>
+                <span className={styles.textGray}>{t('last_location')}</span>
                 <a
                   href={item.location.url}
                   rel="nofollow noopener noreferrer"

@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./Loader.module.scss"; // Import as a module
-import useStore from "../../hooks/useStore";
+import React from 'react';
+import styles from './Loader.module.scss'; // Import as a module
+import useStore from '../../hooks/useStore';
 
 const Loader: React.FC = () => {
   const { showLoader } = useStore();
@@ -12,7 +12,7 @@ const Loader: React.FC = () => {
   return (
     <div
       className={`${styles.busyHolder} backdrop`}
-      style={{ display: "block" }}
+      style={{ display: 'block' }}
     >
       <div className={styles.busy}>
         <div className={styles.loadingText}></div>

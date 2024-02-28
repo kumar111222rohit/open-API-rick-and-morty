@@ -1,15 +1,15 @@
-import React from "react";
-import Head from "next/head";
-import { GetServerSideProps } from "next";
-import { useTranslation } from "react-i18next";
+import React from 'react';
+import Head from 'next/head';
+import { GetServerSideProps } from 'next';
+import { useTranslation } from 'react-i18next';
 import {
   processCharacterData,
   processEpisodesData,
-} from "../utils/processCharacterData";
-import CharacterService from "../services/character.service";
-import Loader from "../components/Loader/Loader";
-import AppContainer from "../components/AppContainer";
-import App from "../components/App";
+} from '../utils/processCharacterData';
+import CharacterService from '../services/character.service';
+import Loader from '../components/Loader/Loader';
+import AppContainer from '../components/AppContainer';
+import App from '../components/App';
 
 function Home({
   data = {},
@@ -22,7 +22,7 @@ function Home({
   return (
     <>
       <Head>
-        <title>{t("title")}</title>
+        <title>{t('title')}</title>
       </Head>
       <AppContainer characterData={data} episodesData={episodesData}>
         <Loader />
@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const data = await CharacterService.fetchCharacterData(0);
   if (!data) {
     res.statusCode = 302;
-    res.setHeader("Location", `https://rickandmortyapi.com/`);
+    res.setHeader('Location', 'https://rickandmortyapi.com/');
     return { props: {} };
   }
   // console.log(data);

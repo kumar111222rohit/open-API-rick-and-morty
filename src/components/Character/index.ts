@@ -1,3 +1,3 @@
-import Component from "./Character";
+import Component from './Character';
 
 export default Component;

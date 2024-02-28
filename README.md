@@ -1,13 +1,10 @@
-
 # open-API-rick-and-morty
 
 This Next.js application leverages Rick and Morty's open API to fetch and display character and episode details. It prioritizes production quality by incorporating various features. The page is rendered with first API call on the server and the subsequest calls are made from client when next/prev is clicked.
 
-
 ## Authors
 
 - [Rohit kumar](https://github.com/kumar111222rohit)
-
 
 ## Demo
 
@@ -15,15 +12,12 @@ The project is live here:
 
 https://open-api-rick-and-morty.vercel.app/
 
-
 ## Environment Settings
 
 To run this project, node version required
 ` v18.17.0`
 
-
-
-##  Local Installation
+## Local Installation
 
 Clone the project
 
@@ -55,7 +49,6 @@ Start the app
   npm run start
 ```
 
-
 ## Running Tests
 
 To run tests, run the following command
@@ -63,7 +56,6 @@ To run tests, run the following command
 ```bash
   npm run test
 ```
-
 
 ## Features
 
@@ -90,8 +82,6 @@ To run tests, run the following command
 - Error Handling: Implements robust error handling mechanisms.
 - Unit test for components and APIs
 
-
-
 ## API Reference
 
 #### Get character
@@ -100,10 +90,10 @@ To run tests, run the following command
   GET /api/character
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `id` | `string` | **Optional**. Gives character data for an id |
-| `page` | `string` | **Optional**. Gives character data from a page |
+| Parameter | Type     | Description                                    |
+| :-------- | :------- | :--------------------------------------------- |
+| `id`      | `string` | **Optional**. Gives character data for an id   |
+| `page`    | `string` | **Optional**. Gives character data from a page |
 
 #### Get episode
 
@@ -115,20 +105,16 @@ To run tests, run the following command
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### Get all locations of a character 
-
+#### Get all locations of a character
 
 ```http
   GET /api/location/
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
+| Parameter | Type     | Description                                         |
+| :-------- | :------- | :-------------------------------------------------- |
 | `id`      | `string` | **Required**. Id of character to fetch all location |
 
-
-
-
 ## 🚀 About Me
-Learning, Unlearning and Re-learning everyday.
 
+Learning, Unlearning and Re-learning everyday.

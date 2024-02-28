@@ -1,6 +1,1 @@
-import "@testing-library/jest-dom";
-jest.mock("next/config", () => () => ({
-  publicRuntimeConfig: {
-    localeSubpaths: {},
-  },
-}));
+import '@testing-library/jest-dom';

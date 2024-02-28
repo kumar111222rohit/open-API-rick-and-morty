@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
-import AppContext from "../../services/appContext";
-import CharacterService from "../../services/character.service";
+import React, { ReactNode } from 'react';
+import AppContext from '../../services/appContext';
+import CharacterService from '../../services/character.service';
 
 const AppContainer: React.FC<{
   characterData: any;
@@ -14,7 +14,7 @@ const AppContainer: React.FC<{
   const handlePagination = async (page: string) => {
     //page is the url coming from next/prev
     //take only page number from url and make an api call
-    const nextPageId = page.split("=")[1];
+    const nextPageId = page.split('=')[1];
     const res = await CharacterService.fetchCharacterData(nextPageId);
     setCharData({ ...res });
   };

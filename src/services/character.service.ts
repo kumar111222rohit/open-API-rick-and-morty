@@ -1,4 +1,4 @@
-import getURL from "../utils/rickAndMortyUrl";
+import getURL from '../utils/rickAndMortyUrl';
 export default class Character {
   /**
    * Asynchronously fetches data from a given URL with specified request options.
@@ -25,14 +25,14 @@ export default class Character {
    * @returns {Promise<any>} The character data from the API.
    */ static async fetchCharacterData(page: any) {
     const requestOptions = {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
     return Character.makeAPICall(
-      `${getURL("FETCH_CHARACTER_DATA")}?page=${page}`,
-      requestOptions,
+      `${getURL('FETCH_CHARACTER_DATA')}?page=${page}`,
+      requestOptions
     );
   }
   /**
@@ -42,16 +42,16 @@ export default class Character {
    */
   static async fetchEpisodeData() {
     const requestOptions = {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
     //passing all episodes as parameter to get the entire result in one call instead of paginated result.
     return Character.makeAPICall(
-      `${getURL("FETCH_EPISODE_DATA")}` +
-        "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41",
-      requestOptions,
+      `${getURL('FETCH_EPISODE_DATA')}` +
+        '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41',
+      requestOptions
     );
   }
 }
